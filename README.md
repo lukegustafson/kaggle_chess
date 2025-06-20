@@ -1,7 +1,7 @@
 # kaggle_chess
 This repo is the source code used to produce my entry to the FIDE & Google Efficient Chess AI Challenge hosted by Kaggle. The competition was to develop a chess engine fitting into a 64KB file and using no more than 5MB of RAM---these are very tight constraints, which made the competition interesting.
 
-The goal of this project was for me to learn about modern chess engines and experiment with training neural networks, particularly NNUEs (Efficiently Updateable Neural Network). As such, this is not a particularly strong engine. Nor is it portable: I only needed it to work on Kaggle and my machine (I used WSL for development). It also does not use UCI (the standard interface for chess engines)---implementing UCI would be a waste of bytes when it's not required!
+The goal of this project was for me to learn about modern chess engines and experiment with training neural networks, particularly NNUEs (Efficiently Updatable Neural Network). As such, this is not a particularly strong engine. Nor is it portable: I only needed it to work on Kaggle and my machine (I used WSL for development). It also does not use UCI (the standard interface for chess engines)---implementing UCI would be a waste of bytes when it's not required!
 
 There are actually four programs in this repo. Two are part of the Kaggle submission:
 * `runner.py` is the Python wrapper code
