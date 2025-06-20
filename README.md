@@ -14,8 +14,8 @@ The other two programs are used for development, but not submitted to Kaggle:
 ## Features
 
 * NNUE for position evaluation
-** 768 -> 64 -> 16 -> 8 architecture of ReLU neurons
-** 4 buckets for the 64 -> 16 -> 8 portion ofthe network (queen vs no queen, and early game vs end game)
+  * 768 -> 64 -> 16 -> 8 architecture of ReLU neurons
+  * 4 buckets for the 64 -> 16 -> 8 portion of the network (queen vs no queen, and early game vs end game)
 * Alpha-beta search with fractional depth and quiescent search
 * Move and capture history for move ordering
 * Killer move heuristic
@@ -23,7 +23,7 @@ The other two programs are used for development, but not submitted to Kaggle:
 * Late move reduction
 * Transposition table, configured to 3MB for my submission
 
-I attempted to add some other search algorithm improvements, but they did not make the cut because of unclear benefits to playing strength: aspiration windows, futility pruning, singular extensions, and various extensions/reductions. As to why these were not performing well, I can only speculate because of the limited time I had to test and tune. My guess is that some combination of missing features (such as PVS rather than alpha-beta) and lack of tuning may have prevented these ideas from being effective.
+I attempted to add some other search algorithm improvements, but they did not make the cut because of unclear benefits to playing strength: aspiration windows, futility pruning, singular extensions, and some extensions/reductions. As to why these were not performing well, I can only speculate because of the limited time I had to test and tune. My guess is that some combination of missing features (such as PVS rather than alpha-beta) and lack of tuning may have prevented these ideas from being effective.
 
 ## Building
 
