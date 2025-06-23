@@ -22,6 +22,8 @@ The other two programs are used for development, but not submitted to Kaggle:
 * Null move pruning
 * Late move reduction
 * Transposition table, configured to 3MB for my submission
+* Pondering
+* Fits into a 64KB file and 5MB of RAM (not including shared libraries)
 
 I attempted to add some other search algorithm improvements, but they did not make the cut because of unclear benefits to playing strength: aspiration windows, futility pruning, singular extensions, and some extensions/reductions. As to why these were not performing well, I can only speculate because of the limited time I had to test and tune. My guess is that some combination of missing features (such as PVS rather than alpha-beta) and lack of tuning may have prevented these ideas from being effective, not to mention the possibility of bugs in my attempts.
 
