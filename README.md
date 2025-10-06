@@ -32,7 +32,7 @@ I attempted to add some other search algorithm improvements, but they did not ma
 
 This project is not intended to be portable (sorry!), and needs to be built with gcc on Linux. 
 
-For the engine `main.cpp`, the script `go.sh` will compile the source, strip the binary, and compress it. It will create two files: `a`, the uncompressed program, and `b`, the compressed file. The other scripts (`training.cpp` and `playoff.cpp`) can be compiled by themselves; the command I used is in the first line of the scripts.
+For the engine `main.cpp`, the script `go.sh` will compile the source, strip the binary, and compress it. It will create two files: `a`, the uncompressed program, and `b`, the compressed file. (Single-letter names because I was in the habit of saving every byte possible!) The other scripts (`training.cpp` and `playoff.cpp`) can be compiled by themselves; the command I used is in the first line of the scripts.
 
 ## Overview
 
