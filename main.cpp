@@ -416,7 +416,8 @@ Value alpha_beta(int depth, int ply, Value lower_bound, Value upper_bound, int16
 			return null_value;
 		}
 	}
-	
+
+	//Iterate through legal moves. move_idx = -1 is TT move
 	for(int move_idx = -1; true; ++move_idx)
 	{
 		Move move;
@@ -424,7 +425,7 @@ Value alpha_beta(int depth, int ply, Value lower_bound, Value upper_bound, int16
 		//Do move generation
 		if(move_idx == 0)
 		{
-			if(move_gen == 1)
+			if(move_gen == 1) //We're in check, use move generation with only capture heuristics
 			{
 				movegen::legalmoves(ms, board);
 				if(ms.size() == 0)
@@ -437,7 +438,7 @@ Value alpha_beta(int depth, int ply, Value lower_bound, Value upper_bound, int16
 					move.setScore(captured_val);
 				}
 			}
-			else if(move_gen == 2)
+			else if(move_gen == 2) //Quiescent search: captures and promotions only
 			{
 				movegen::legalmoves(ms, board, movegen::MoveGenType::CAPTURE);
 				int last_capture = ms.size();
@@ -465,7 +466,7 @@ Value alpha_beta(int depth, int ply, Value lower_bound, Value upper_bound, int16
 					}
 				}
 			}
-			else if(move_gen == 3)
+			else if(move_gen == 3) //Regular move generation: all moves ordered by various heuristics
 			{
 				movegen::legalmoves(ms, board);
 		
@@ -935,4 +936,5 @@ int main(void)
 	}
 	
 	return 0;
+
 }
