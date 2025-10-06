@@ -4,7 +4,7 @@ This repo is the source code used to produce my entry to the FIDE & Google Effic
 The goal of this project was for me to learn about modern chess engines and experiment with training neural networks, particularly NNUEs (Efficiently Updatable Neural Network). As I am no chess engine expert, this is not a very strong engine (although much stronger than myself!). Nor is it portable: I only needed it to work on Kaggle and my machine.
 
 There are actually five programs in this repo. Two are part of the Kaggle submission:
-* `runner.py` is the Python wrapper code
+* `runner.py` is the Python wrapper code. Tersely written---I didn't want to waste any bytes on this script.
 * `main.cpp` is the C++ chess engine
 
 The other three programs are used for development, but not submitted to Kaggle:
