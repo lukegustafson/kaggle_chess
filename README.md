@@ -42,6 +42,7 @@ I started with [chess-library](https://github.com/Disservin/chess-library) for t
 * Remove code not needed for my engine
 * Remove most calls into the standard library (to minimize memory usage from paging in library code and allocations within libary functions)
 * Remove all memory allocations (e.g. replace `vector` with arrays)
+* Un-template some functions to reduce code size
 * Changed move generation for rooks. The original implementation used a single lookup table which required on the order of 1MB RAM. I replaced it with two lookup tables---one for horizontal movement and one for vertical--which are much smaller.
 
 I wrote the search and evaluation code from scratch. For the most part, the search is based on standard techniques, which are listed in the "Features" section above. The evaluation is entirely based on a NNUE. A big part of the challenge was building a decent NNUE which fit into the 64KB constraint---I had about 40KB left for neural network data. My approach to the NNUE architecture was as follows:
